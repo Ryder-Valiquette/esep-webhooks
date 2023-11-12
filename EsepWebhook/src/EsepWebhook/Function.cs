@@ -22,7 +22,7 @@ public class Function
 
         string slackChannel = "#event-assignment";
 
-        string payload = $"{{'channel': '{slackChannel}','text':'Issue Created: {json.issue.html_url}'}}";
+        string payload = $"{{'channel':'{slackChannel}','text':'Issue Created: {json.issue.html_url}'}}";
 
         var client = new HttpClient();
         var webRequest = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvironmentVariable("SLACK_URL"))
